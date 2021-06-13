@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//fonts.googleapis.com/css?family=Alef&subset=latin" rel="stylesheet" type="text/css">
+
+</head>
+<style>
+    * {
+        font-family: 'Alef', sans-serif;
+        margin-top: 20px;
+    }
+
+    #container {
+        display: flex;
+    }
+
+    #mpl__container {
+        text-align: center;
+    }
+
+    .mpl_login_home>h1 {
+        font-size: 51px;
+    }
+
+    .mpl_login_locsto {
+        /* border: 1px solid green; */
+        width: 40%;
+        height: 80%;
+        margin: -10px 420px;
+        text-align: left;
+    }
+
+    .login>label {
+        text-align: left;
+        font-family: Trim, sans-serif;
+    }
+
+    .login>input {
+        text-align: left;
+        border: 1px solid #e7e7e7;
+        width: 460px;
+        height: 48px;
+        padding: 2px;
+    }
+
+    #mpl_login_here {
+        background-color: black;
+        color: white;
+        font-size: 13px;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    #mpl_login_create {
+        text-align: center;
+        background-color: #ffffff;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .mpl__footer {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        border: 1px solid red;
+        width: 95%;
+        margin-top: -90px;
+    }
+
+    .mpl__footer>.mpl__icons {
+        margin: 10px 140px;
+        width: 114px;
+        height: 64px;
+        /* border: 1px solid green */
+    }
+
+    .mpl__icons>.fa {
+        font-size: 24px;
+        padding: 8px;
+        line-height: 28.8px;
+    }
+
+    .mpl_footer_images>img {
+        font-size: 18px;
+    }
+
+    span {
+        height: 56px;
+        font-weight: bold;
+        line-height: 28.8px;
+    }
+
+
+    /* toggle */
+
+    .openbtn {
+        margin-left: -192px;
+        cursor: pointer;
+        border: none;
+    }
+
+    .openbtn:hover {
+        background-color: #444;
+    }
+
+    .sidepanel {
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        height: 250px;
+        top: 12vh;
+        left: 160vh;
+        background-color: dodgerblue;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 70px;
+        margin: 0px 0px;
+        border-radius: 5px;
+    }
+
+    .sidepanel a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 15px;
+        color: black;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidepanel a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidepanel .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+    }
+</style>
+
+<body>
+    <div id="container">
+
+        <!-- mpl container -->
+
+        <div id="mpl__container">
+            <div class="mpl__navbars">
+                <img src="./images/mplpng.png" alt="mplnavicon">
+            </div>
+            <div class="mpl_login_home">
+                <p> Home/Account </p>
+                <h1> Log in </h1>
+            </div>
+            <div class="mpl_login_locsto">
+                <form class="login">
+                    <label><b>Email
+                        </b>
+                    </label>
+                    <br>
+                    <input type="text" name="mpl_login_username" id="mpl_login_username" placeholder="Username">
+                    <br><br>
+                    <label><b>password
+                        </b>
+                    </label>
+                    <br>
+                    <input type="text" name="mpl_login_username" id="mpl_login_password" placeholder="Password">
+                    <br>
+                    Forgot <a href="#">Password</a>
+                    <br>
+                    <button onclick="mpl_login_homepage()" id="mpl_login_here"> login </button>
+                    <br><br>
+                    <hr>
+                    <button onclick="mpl_register()" id="mpl_login_create"> register </button>
+                </form>
+            </div>
+
+
+            <div class="mpl__footer">
+                <div class="mpl__icons">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                </div>
+                <div class="mpl_years_copywrite">
+                    <p>© 2021 MPL <span> NEREUS SPORT PRODUCTS<br> PRIVATE LIMITED. </span> All rights reserved.</p>
+                </div>
+                <div class="mpl_footer_images">
+                    <img src="./images/airtel.png" style="width: 22px;" alt="airtel" />
+                    <img src="./images/amazon.png" style="width: 22px;" alt="amazon" />
+                    <img src="./images/freecha.png" style="width: 22px;" alt="freecharge" />
+                    <img src="./images/mastercard.jpg" style="width: 22px;" alt="mastercard" />
+                    <img src="./images/paypal.jpg" style="width: 22px;" alt="paypal" />
+                    <img src="./images/mastercard.jpg" style="width: 22px;" alt="mastercard" />
+                    <img src="./images/paypal.jpg" style="width: 22px;" alt="paypal" />
+                </div>
+            </div>
+        </div>
+        <!-- end mplcontainer -->
+
+        <!-- start icon register-->
+        <div>
+            <button class="openbtn" onclick="openNav()"><span>☰ <i class="fa fa-user-circle"></i>
+            </span> Toggle Sidepanel</button>
+            
+            <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+
+        function mpl_register(){
+            event.preventDefault()
+            window.location.href = "./register.html"
+        }
+        
+        function mpl_login_homepage(){
+            event.preventDefault()
+            var mpl_login_username = document.getElementById("mpl_login_username").value;
+            var mpl_login_password = document.getElementById("mpl_login_password").value;
+
+            var mpl_login_home = JSON.parse(localStorage.getItem("registers"));
+            mpl_login_home.forEach( (indivData,index) => {
+                var {mpl_login_username,mpl_login_password} = indivData;
+                if(mpl_login_username === mpl_login_username && mpl_login_password === mpl_login_password){
+                    window.location.href  = "./homepage.html";
+                }
+                else{
+                    console.log("wrong ansewer");
+                }
+            });
+        }
+
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
