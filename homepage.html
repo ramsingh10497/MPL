@@ -62,10 +62,41 @@
     }
 
     .mpl__descriptiton {
-        /* padding-top: 73px; */
         width: 45%;
         margin-left: 10px;
+        /* margin: 32px 22PX; */
+
         border: 1px solid red;
+    }
+
+    .mpl__descriptiton>h1 {
+        font-size: 25px;
+        margin: 32px 22PX;
+        line-height: 35.7px;
+        color: #000000;
+        /* margin: 0PX 120PX; */
+        margin: 32px 22PX;
+
+    }
+
+    .mpl__descriptiton>h1+p {
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        margin: 32px 22PX;
+        line-height: 35.7px;
+        color: #000000;
+        margin: 32px 22PX;
+        box-sizing: border-box;
+
+    }
+
+    .mpl__descriptiton>.mpl__amount {
+        font-size: 12px;
+        line-height: 22px;
+        color: black;
+        border: 1px solid red;
+        margin: 32px 22PX;
+
     }
 
     .mpl__descriptiton_ul {
@@ -76,6 +107,8 @@
     }
 
     .mpl__descriptiton_ul>li {
+        background-color: #000;
+        color: wheat;
         border-radius: 5px;
         list-style-type: none;
         border: 1px solid grey;
@@ -83,31 +116,27 @@
         width: 32px;
         text-align: center;
         padding: 5px;
-
+        font-family: Futura, sans-serif;
+        /* font-size: 12px; */
+        letter-spacing: 1.2px;
+        line-height: 12px;
+        text-decoration: none solid rgb(113, 113, 113);
+        text-align: center;
+        text-transform: uppercase;
+        word-spacing: 0px;
     }
 
     .mpl__sizehs {
         display: flex;
         flex: 1;
         justify-content: space-between;
-        margin: 12px;
+        margin: 12px 42px;
     }
 
-    .mpl__sizehs>input {
-        background-color: #ffffff;
-        border-left: none;
-        border-top: none;
-        border-right: none;
-        border-bottom: 1px solid grey;
-        cursor: pointer;
-        text-align: center;
-    }
 
     .mpl__increament {
         display: flex;
         flex: 1;
-        /* background-color: #f1f1f1; */
-        /* cursor: pointer; */
     }
 
     .mpl__increament>button {
@@ -125,7 +154,6 @@
 
     .mpl__AddCart {
         display: flex;
-
 
     }
 
@@ -149,6 +177,113 @@
         color: white;
         font-weight: bold;
     }
+
+    /* overlay */
+
+
+    /* The Modal (background) */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+        transition: all 0.3s ease 0s
+    }
+
+    /* Modal Content */
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 60%;
+    }
+
+
+    .modal-content>h4 {
+        text-align: center;
+        font-weight: bold;
+        font-family: TRIM-BOLD;
+        font-size: 16px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #4D5959;
+    }
+
+
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    #myBtn {
+        margin-top: 12px;
+        width: 50px;
+        height: 22px;
+        border: none;
+        background-color: white;
+        border-bottom: 1px solid grey;
+    }
+
+    /* show */
+    .mplShow {
+        border: 1px solid red;
+        display: flex;
+        width: 130vh;
+        height: 30vh;
+        height: auto;
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    .mplShow>.mplSizes>img {
+        border: 1px solid red;
+        width: 230px;
+    }
+
+    /* tables */
+    .mplSizeTable {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .mplSizeTable td,
+    .mplSizeTable th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    /* .mplSizeTable tr:nth-child(even){background-color: #f2f2f2;} */
+    /* .mplSizeTable td:nth-child(1){color: #000;} */
+    /* .mplSizeTable tr:hover {background-color: #ddd;} */
+
+
+    .mplSizeTable th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #ffffff;
+        border: 1px solid whitesmoke;
+        color: #000;
+    }
 </style>
 
 <body>
@@ -169,20 +304,91 @@
     <div id="mpl__container">
         <!-- jersey -->
         <div class="mpl__Team">
+
+
             <div class="mpl__jersey">
                 <img src="images/jersey.jpg" alt="">
             </div>
             <div class="mpl__descriptiton">
                 <h1> Team India Retro Jersey - Fan Edition</h1>
                 <p> What’s a cricket fan without a jersey? To cheer like the <br>biggest fan, you need the right gear!
-                    The Fan </p>
+                    The Fan <span style="color: grey;"> Read more....</span></p>
                 <div class="mpl__amount">
-                    <h2> Rs 13000</h2>
+                    <p style="font-family: TRIM-SEMIBOLD;color:#000; font-size:17px;font-weight: bold;"> Rs 13000</p>
+                    <p style="font-family: TRIM-SEMIBOLD;"> Price is inclusive of GST. </p>
                 </div>
                 <hr style="width: 500px;">
                 <div class="mpl__sizehs">
-                    <p> size hs</p>
-                    <input type="button" onclick="showpop()" value="size Guide" />
+                    <p style="color: #000;">SIZE: XS </p>
+                    <!-- guide -->
+
+                    <!-- Trigger/Open The Modal -->
+                    <button id="myBtn">guide</button>
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>
+                            <h4> size Guide</h4>
+                            <div class="mplShow">
+                                <div class="mplSizes">
+                                    <img src="./images/Sizeimage.png" alt="">
+                                </div>
+
+                                <div class="mplSizes">
+                                    <table class="mplSizeTable">
+                                        <tr>
+                                            <th>Size</th>
+                                            <th>Chest</th>
+                                            <th>Length</th>
+                                        </tr>
+                                        <tr>
+                                            <th> ds</th>
+                                            <td>34</td>
+                                            <td>27</td>
+                                        </tr>
+                                        <tr>
+                                            <th> small </th>
+                                            <td> 36.5 </td>
+                                            <td>27.5</td>
+                                        </tr>
+                                        <tr>
+                                            <th> medium </th>
+                                            <td>39.5</td>
+                                            <td>28</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Large </th>
+                                            <td>42</td>
+                                            <td>28.5</td>
+                                        </tr>
+                                        <tr>
+                                            <th> XL </th>
+                                            <td>49.5</td>
+                                            <td>29</td>
+                                        </tr>
+                                        <tr>
+                                            <th>XXL </th>
+                                            <td>53.5</td>
+                                            <td>30</td>
+                                        </tr>
+
+                                    </table>
+                                </div>
+
+                            </div>
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- end overlay -->
+
                 </div>
                 <ul class="mpl__descriptiton_ul">
                     <li> S </li>
@@ -193,27 +399,28 @@
                     <li> L </li>
                     <li> LL </li>
                     <li> XXL </li>
-                    <li> XXL </li>
                 </ul>
                 <div class="mpl__sizehs">
-                    <p> color <span>navy</span></p>
+                    <p style="color: #000;"> color <span>navy</span></p>
                 </div>
+
                 <div class="mpl__AddCart">
                     <div class="mpl__increament">
-                        <!-- <button> + </button>
-                            <button> - </button> -->
                         <input type="button" onclick="mpl__cartincre()" value="+" />
-                        <!-- <input type="button" value="1"> -->
-                        <p style="text-align: center;" id="cartInc"> 1 </p>
+                        <p id="cartInc" style="text-align: center;"> 1 </p>
                         <input type="button" onclick="mpl__cartdec()" value="-">
                     </div>
                     <div>
-                        <input
-                            style="height: 30px; border: 1px solid green;background-color: whitesmoke;width: 172px; margin-left: -310px;"
-                            type="button" value="Add To Cart" />
-                    </div>
+                        <button onclick="addToCarts()"
+                            style="height: 30px; border: 1px solid green;background-color: whitesmoke;width: 172px; margin-left: -310px;">
+                            carts </button>
+                        <p id="cartInctst" style="text-align: center;"> 1 </p>
+                        <div id="addShowCart">
 
+                        </div>
+                    </div>
                 </div>
+
                 <div class="mpl__buy">
                     <input style="background-color: red;" type="button" value="BuyitNow" />
                 </div>
@@ -410,12 +617,6 @@
 
     </div>
 
-    <script src="./register.js"></script>
-    <script src="./mplmenuOpen.js"></script>
-
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-
 
 
     <script>
@@ -435,10 +636,22 @@
             else {
                 p.innerHTML = Number(count);
             }
-            // var div = document.getElementById("");
-            // div.append(p);
         }
+
+        function addToCarts() {
+            var x = document.getElementById("cartInctst");
+            event.preventDefault()
+            var cart = document.getElementById("addShowCart");
+            console.log("hello");
+            // cart.innerHTML = x
+            cart.append(x)
+        }
+
     </script>
+    <script src="./register.js"></script>
+    <script src="./mplmenuOpen.js"></script>
+
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
 </body>
 
 </html>
