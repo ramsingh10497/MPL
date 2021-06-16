@@ -4,7 +4,7 @@ body {
     font-family: Muli,sans-serif;
 }
 .footerMainContainer {
-    background-color: #f5f7fa;
+    background-color: #1A1A18;
     display: flex;
     flex-direction: column;
 }

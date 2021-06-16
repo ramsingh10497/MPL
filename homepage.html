@@ -284,16 +284,22 @@
         border: 1px solid whitesmoke;
         color: #000;
     }
+
+    .addShowCartP {
+        color: red;
+        border: 1px solid red;
+        margin: 5px 3px;
+    }
 </style>
 
 <body>
     <div id="container">
         <!-- start icon register-->
         <div>
-            <img src="./images/mplpng.png" alt="mplnavicon">
+            <img src="./images/mplpng.png" alt="">
         </div>
         <div>
-            <input type="button" value="showCarts" />
+            <input type="button" value="icons" />
         </div>
 
     </div>
@@ -304,7 +310,6 @@
     <div id="mpl__container">
         <!-- jersey -->
         <div class="mpl__Team">
-
 
             <div class="mpl__jersey">
                 <img src="images/jersey.jpg" alt="">
@@ -335,6 +340,7 @@
                             <h4> size Guide</h4>
                             <div class="mplShow">
                                 <div class="mplSizes">
+                                    <!-- <img src="./images/Sizeimage.png" alt="Sizeimage />  -->
                                     <img src="./images/Sizeimage.png" alt="">
                                 </div>
 
@@ -404,6 +410,7 @@
                     <p style="color: #000;"> color <span>navy</span></p>
                 </div>
 
+
                 <div class="mpl__AddCart">
                     <div class="mpl__increament">
                         <input type="button" onclick="mpl__cartincre()" value="+" />
@@ -414,23 +421,22 @@
                         <button onclick="addToCarts()"
                             style="height: 30px; border: 1px solid green;background-color: whitesmoke;width: 172px; margin-left: -310px;">
                             carts </button>
-                        <p id="cartInctst" style="text-align: center;"> 1 </p>
-                        <div id="addShowCart">
-
-                        </div>
                     </div>
                 </div>
+                <div id="addShowCart">
+                </div>
+
 
                 <div class="mpl__buy">
-                    <input style="background-color: red;" type="button" value="BuyitNow" />
+                    <input style="background-color: red;" type="button" value="BuyitNow" onclick="mplBuyNOw()" />
                 </div>
-                <p> looking product</p>
+                <p style="color: red;"> looking product</p>
                 <div class="mpl__moredetails">
                     <p> More details </p>
                     <hr>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quis perspiciatis nisi id, animi
-                        harum rerum? Consequatur magnam, optio ipsam veritatis architecto repudiandae officia labore
+                        harum rerum? Consxequatur magnam, optio ipsam veritatis architecto repudiandae officia labore
                         assumenda vero repellat aperiam iure!
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum culpa nulla temporibus,
                         doloremque explicabo modi repellat aliquam porro quasi minus omnis quod alias facilis sapiente
@@ -439,17 +445,10 @@
                 </div>
             </div>
         </div>
-
         <!-- size guide  -->
     </div>
     <!-- footer -->
-    <!--Footer starts from here-->
     <div class="footerMainContainer">
-
-        <!--Information container-->
-
-
-        <!--Navigation Container-->
         <div class="secondContainer">
             <div class="secondContainerBox1">
                 <h3>MPL</h3>
@@ -614,10 +613,7 @@
                 </div>
             </div>
         </div>
-
     </div>
-
-
 
     <script>
         var count = 0;
@@ -638,13 +634,27 @@
             }
         }
 
+
+
         function addToCarts() {
-            var x = document.getElementById("cartInctst");
-            event.preventDefault()
-            var cart = document.getElementById("addShowCart");
-            console.log("hello");
-            // cart.innerHTML = x
-            cart.append(x)
+            var addShowCart = document.getElementById("addShowCart")
+            var div = document.createElement("div");
+            addShowCart.innerHTML = ""
+            var p = document.createElement("p");
+            p.setAttribute("class", "addShowCartP")
+            var cartInctst = document.getElementById("cartInc").textContent * 13000;
+            p.innerHTML += cartInctst * 1;
+            div.append(p)
+            addShowCart.append(div)
+            var cartsObj = {
+                "carts": cartInctst
+            }
+            localStorage.setItem("addCarts", JSON.stringify(cartsObj));
+        }
+
+
+        function mplBuyNOw() {
+            window.location.href = "./mplbuyIt.html"
         }
 
     </script>

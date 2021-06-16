@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #mplBuyContainer {
+        border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mplBuylinks{
+        color: #545454;
+        font-size:  14px;
+        margin: 14px 0 0 0;
+        text-align: center;
+
+
+    }
+
+    /* myshippings */
+    .mplShippings{
+        color: #333333;
+        font-size: 18px;
+        line-height: 23.4px;
+        margin: 0px 23px;
+
+            }
+    /*  */
+
+    .mplBuyItDesc {
+        width: 50%;
+        border: 1px solid red;
+        background-color: whitesmoke;
+        border-radius: 5px;
+        box-shadow: 5px 5px 5px;
+        /* text-align: center;     */
+        background-color: #FFFFFF;
+    }
+    .mplBuyItDesc > .mplContactInfo {
+        color: #545454;
+        font-size: 14px;
+        line-height: 14.2px;
+        margin: 0px 23px;
+
+    }
+
+    .mplContactInfo{
+        display: flex;
+        flex: 1;
+        border: 1px solid red;
+        justify-content: space-between;
+    }
+    
+    
+    
+    .mplBuyItAmount {
+        width: 40%;
+        background-color: #FAFAFA;
+    }
+    .mplShippingsInputs > input{
+        width: 93%;
+        padding: 5px;
+        color: #333333;
+        box-sizing: border-box;
+        font-size: 14px;
+        margin: 5px 23px;
+        padding: 13px 11px 13px 11px;
+        outline: rgb(51, 51, 51) dashed 0px;
+        transition:  all 0.2s ease-out 0s;
+    }
+
+    .mplShippingsInputsUser{
+        display: flex;
+    }
+</style>
+
+<body>
+    <div id="mplBuyContainer">
+        <div class="mplBuyItDesc">
+            <div class="mplBuylinks">
+                <img src="./images/mplpng.png" alt="mpl buy" />
+                <p> Information > Shipping > Payment </p>
+            </div>
+            <div class="mplContactInfo">
+                <h3> Contact information </h3>
+                <p> Already have an account ? <span> Log in </span></p>
+            </div>
+            <div class="">
+                <input type="text" placeholder="Email" /><br><br>
+                <input type="checkbox" placeholder="checkbox" />keep me 
+            </div>
+            <div class="mplShippings">
+                <p> shipping address </p>
+                <div class="mplShippingsInputs mplShippingsInputsUser">
+                    <input type="text" placeholder="firstName" /> <br>
+                    <input type="text" placeholder="lastname" />
+                </div>
+                <div class="mplShippingsInputs">
+                    <input type="text" placeholder="Address" /><br><br>
+                    <input type="text" placeholder="Appartment" /><br><br>
+                    <input type="text" placeholder="City" /><br><br>
+                </div>
+                <div class="mplShippingsInputs">
+                    <input type="text" placeholder="phone" />
+                </div>
+                <div><br><br>
+                    <input type="button" onclick="mplContinues()" value="Continue to shopping"
+                    style="color:white;font-size: 14px;background-color: #000;box-sizing: border-box;    
+                    border-radius: 5px;padding: 1.4em 1.7em;margin: 0px 27px;                    "
+                    /><br><br>
+                </div>
+            </div>
+        </div>
+        <div class="mplBuyItAmount">
+            <div class="mplImages"> 
+                <img src="./images/amazon.png" alt="">
+                <p> Team India </p>
+                <p> Rs.. 1599.00 </p>
+            </div>
+
+            <hr>
+            <div class="mplDiscounts"> 
+                <input type="text" placeholder="discount" />
+                <button> Apply </button>
+            </div>
+            
+            <div class="mplSubtotals">
+                <p> subtotals </p>
+                <p> Rs.. 1599</p>
+            </div>
+                        
+            <div class="mplShippings">
+                <p> mplShippings </p>
+                <p> calculate at next Steps </p>
+            </div>
+
+            <div class="mplShippings">
+                <div>
+                    <p> Total </p>
+                    <p>including 91.05 in taxes </p>
+                </div>
+                <p> Rs.. 1599.00 </p>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
