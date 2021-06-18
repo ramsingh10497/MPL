@@ -1,0 +1,45 @@
+*{
+margin: 0;
+padding: 0;
+} 
+#nav_bar{
+    position: fixed;
+    background-color: white;
+    width: 100vw;
+    top: 0;
+}
+#nav_bar img{
+    width: 110px;
+    margin-top: 20px;
+    margin-left: 100px;
+    
+}
+span{
+    margin-top: 15px;
+    float: right;
+    margin-right: 100px;
+    font-size: 28px;
+    color: red;
+}
+#menu{
+    background-color:#230046;
+    padding: 20px;
+    text-align: right;
+
+    min-height: 500px;
+    overflow-y: visible;
+    display: none;
+    margin-top: 5px;
+}
+#menu  p{
+    margin: 20px;
+    
+    font-size: 32px;
+}
+#menu p a{
+    color: white;
+    text-decoration: none;
+}
+#menu p a:hover{
+    color: lawngreen;
+}

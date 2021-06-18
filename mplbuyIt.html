@@ -6,139 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./mplbuy.css">
 </head>
-<style>
-    #mplBuyContainer {
-        border: 1px solid red;
-        display: flex;
-        justify-content: space-between;
-    }
 
-    .mplBuylinks {
-        color: #545454;
-        font-size: 14px;
-        margin: 14px 0 0 0;
-        text-align: center;
-
-
-    }
-
-    /* myshippings */
-    .mplShippings {
-        color: #333333;
-        font-size: 18px;
-        line-height: 23.4px;
-        margin: 0px 13px;
-    }
-
-    /*  */
-
-    .mplBuyItDesc {
-        width: 50%;
-        border: 1px solid red;
-        background-color: whitesmoke;
-        border-radius: 5px;
-        box-shadow: 5px 5px 5px;
-        /* text-align: center;     */
-        background-color: #FFFFFF;
-    }
-
-    .mplBuyItDesc>.mplContactInfo {
-        color: #545454;
-        font-size: 14px;
-        line-height: 14.2px;
-        margin: 0px 23px;
-
-    }
-
-    .mplContactInfo {
-        display: flex;
-        flex: 1;
-        /* border: 1px solid red; */
-        justify-content: space-between;
-    }
-
-
-
-    .mplBuyItAmount {
-        width: 40%;
-        background-color: #FAFAFA;
-        font-size: 14px;
-    }
-
-    .mplShippingsInputs>input {
-        width: 93%;
-        padding: 5px;
-        color: #333333;
-        box-sizing: border-box;
-        font-size: 14px;
-        margin: 5px 23px;
-        padding: 13px 11px 13px 11px;
-        outline: rgb(51, 51, 51) dashed 0px;
-        transition: all 0.2s ease-out 0s;
-    }
-
-    .mplShippingsInputsUser {
-        display: flex;
-    }
-
-    .mplImages {
-        display: flex;
-        color: goldenrod;
-        font-size: 14px;
-        text-align: left;
-        color: green;
-        margin: 0px 42px;
-
-    }
-
-    .mplImages>p {
-        padding-left: 12px;
-        margin-left: 12px;
-        margin-top: 32px;
-    }
-
-    /* mplApply */
-
-    .mplTotalsApply {
-        font-size: 15px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .mplDiscounts {
-        padding: 13px 11px 13px 11px;
-        font-size: 14px;
-        background-color: #FFFFFF;
-        border: 1px solid #D5D5D5;
-        cursor: text;
-        box-sizing: border-box;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-radius: 5px;
-        border-bottom-right-radius: 5px;
-        width: 50vh;
-    }
-
-    .mplDiscounts+button {
-        background-color: #C8C8C8;
-        border: none;
-        color: white;
-        border-radius: 5px;
-        /* margin-left: ;    */
-        width: 114px;
-        height: 45px;
-    }
-
-    .mplShippings>p+p {
-        margin-left: 260px;
-    }
-
-    hr {
-        margin-top: 23px;
-        width: 62vh;
-    }
-</style>
 
 <body>
     <div id="mplBuyContainer">
@@ -175,7 +45,7 @@
         <div class="mplBuyItAmount">
 
             <div class=" mplImages">
-                <img style="width: 100px;margin-left: -67px;" src="./images/amazon.png" alt="amazon">
+                <img style="width: 100px;margin-left: -67px;" src="./images/jersey.jpg" alt="amazon">
                 <p> Team India Retro Jersey - Fan Edition</p>
                 <p id="mplLocalAmount"> Rs.. 1599.00 </p>
             </div>
@@ -200,70 +70,11 @@
                 <p style="font-size: 24px"> Total</p>
                 <p id="mplShippingorder" style="font-size: 23px;"> Rs.. 1599.00 </p>
             </div>
-            <!-- <p>including 91.05 in taxes </p> -->
+            <p style="margin-left: 12px;color: grey;">including 91.05 in taxes </p>
         </div>
     </div>
     </div>
 </body>
-<script>
-    var cart = JSON.parse(localStorage.getItem("addCarts"));
-    // console.log(carts)
-    var p = document.getElementById("mplLocalAmountShip")
-    p.innerHTML = cart["carts"];
-
-    var p2 = document.getElementById("mplShippingorder")
-    p2.innerHTML = cart["carts"];
-
-    var p3 = document.getElementById("mplLocalAmount")
-    p3.innerHTML = cart["carts"];
-
-
-
-
-    var mplStore = []
-    var count = 0;
-    function mplContinues() {
-        setInterval(function(){
-            var firstName = document.getElementById("firstName").value;
-            var lastname = document.getElementById("lastName").value;
-            var address = document.getElementById("address").value;
-            var Appartment = document.getElementById("Appartment").value;
-            var City = document.getElementById("City").value;
-            var storeShipping = {
-                "firstName":firstName,
-                "lastname":lastname,
-                "address":address,
-                "Appartment":Appartment,
-                "City":City,
-            }
-            mplStore.push(storeShipping);
-            localStorage.setItem("storeShipping",JSON.stringify(mplStore))
-            window.location.href = "./payment.html";
-        }
-        ,4000)
-        count = count + 1
-        console.log(count)
-    }
-
-    var discountsVal  = []
-    function mplDiscounts(){
-        var discountInput = document.getElementById("mplDiscountsID").value;
-        var disco = JSON.parse(localStorage.getItem("addCarts"));
-        var p3 = document.getElementById("mplShippingorder");
-        var disObj = {
-            "dist":p3.textContent/100
-        }
-        discountsVal.push(disObj)
-
-        if(discountInput === "masai10"){
-            p3.innerHTML = cart["carts"] / 100;
-            localStorage.setItem("discounts",JSON.stringify(discountsVal))
-        }
-        else{
-            p3.innerHTML = cart["carts"] ;
-        }
-    }
-
-</script>
+<script src="./mplbuyit.js"></script>
 
 </html>

@@ -20,6 +20,7 @@
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="//fonts.googleapis.com/css?family=Alef&subset=latin" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="./nav_bar.css">
 
     </head>
     <style>
@@ -41,7 +42,6 @@
 
 
         thead>tr {
-            /* padding-left: 12px; */
             margin: 10px 42px;
             text-align: center;
         }
@@ -70,17 +70,55 @@
             border: 1px solid rebeccapurple;
         }
 
-        #mplMOney{
-            border-top:1px dashed ;
+        #mplMOney {
+            border-top: 1px dashed;
             color: white;
-            font-size:31px;
+            font-size: 31px;
             padding: 13px;
-            
+
         }
     </style>
 
     <body>
         <div id="container" class="mplcontainerBackground">
+
+            <div id="nav_bar">
+
+                <img src="https://www.mpl.live/static/MPL_Logo.png" alt="">
+
+                <span onclick="show_menu()">&#9776</span>
+
+                <div id="menu">
+
+
+                    <p><a href="#">bubble shoter</a></p>
+                    <p><a href="#">Fantancy Cricket</a></p>
+                    <p> <a href="#">Fantancy Fottball</a></p>
+                    <p><a href="#">Rummy</a></p>
+                    <p><a href="#">Lodu</a></p>
+                    <p><a href="#">Fruit Slice </a></p>
+                    <p><a href="#">fruit chap</a> </p>
+                    <p><a href="#">Runner No 1</a></p>
+                    <p><a href="#">8 ball pool</a> </p>
+                    <p><a href="#">Speed Chess</a> </p>
+                    <p><a href="#">Wcc2</a> </p>
+                    <p><a href="#">Quiz</a> </p>
+                    <p><a href="#">Monster Truck</a></p>
+                    <p><a href="#">Call Break</a></p>
+                    <p><a href="#">Auto Raja</a></p>
+                    <p><a href="#">Go ride</a> </p>
+                    <p><a href="#">column Online</a> </p>
+                    <p><a href="#">Fantancy Bascetball</a></p>
+                    <p><a href="#">More Game</a> </p>
+                    <p><a href="#">Blog</a> </p>
+                    <p><a href="#">College premoer league</a> </p>
+                    <p><a href="#">Fruit Dart</a> </p>
+                    <p><a href="#">Fantancy Games</a></p>
+
+                </div>
+
+
+            </div>
 
             <!-- mpl container -->
 
@@ -114,8 +152,10 @@
                             <td id="mplMOney"> </td>
 
                         </tr>
-                        <tr> 
-                            <td> <span style="color: red;"> <i class="fa fa-asterisk" style="font-size:18px;color:red"></i></span>order successfully done with Gst</td>
+                        <tr>
+                            <td> <span style="color: red;"> <i class="fa fa-asterisk"
+                                        style="font-size:18px;color:red"></i></span>order successfully done with Gst
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -137,19 +177,16 @@
             Citys.innerHTML = `${City}`
             addresss.innerHTML = `${address}`
         });
-        // var registers = localStorage.getItem("registers");
         var addCarts = JSON.parse(localStorage.getItem("discounts"));
-        // console.log(addCarts)
-        // var {dist}  = addCarts
-        // var p3 = document.getElementById("mplMOney");
-        // p3.innerHTML = `${dist}`;
         addCarts.forEach((element => {
             var { dist } = element
             var p3 = document.getElementById("mplMOney");
             p3.innerHTML = `${dist}`;
 
-        }))
+        }));
+
 
 
 
     </script>
+    <script src="./nav_bar.js"></script>

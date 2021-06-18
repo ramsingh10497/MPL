@@ -396,7 +396,6 @@ p.hoverOnP:hover, p.hoverOnP:active {
 
 /* footer third container*/
 .line {
-  /* border-top: 1px solid #6d6d6d; */
   margin: 20px 90px 20px 90px;
 }
 .footerEnd {
@@ -409,3 +408,6 @@ p.hoverOnP:hover, p.hoverOnP:active {
 .footerEndIcons {
   cursor: pointer;
 }
+
+
+

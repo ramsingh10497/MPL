@@ -51,7 +51,6 @@ p.hoverOnP:hover, p.hoverOnP:active {
 
 /* footer third container*/
 .line {
-    /* border-top: 1px solid #6d6d6d; */
     margin: 20px 90px 20px 90px;
 }
 .footerEnd {
@@ -63,4 +62,261 @@ p.hoverOnP:hover, p.hoverOnP:active {
 }
 .footerEndIcons {
     cursor: pointer;
+}
+
+
+/* homes */
+* {
+    font-family: 'Alef', sans-serif;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 89%;
+    margin-top: -10px;
+    background-color: #ffffff;
+    position: fixed;
+}
+
+/* right_toggle */
+
+/* jersy */
+#mpl__container {
+    width: 90%;
+}
+
+.mpl__Team {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex: 1;
+}
+
+.mpl__jersey>img {
+    width: 100%;
+    height: 70%;
+    
+}
+
+.mpl__descriptiton {
+    width: 45%;
+    margin-left: 10px;
+    
+}
+
+.mpl__descriptiton>h1 {
+    font-size: 25px;
+    margin: 32px 22PX;
+    line-height: 35.7px;
+    color: #000000;
+
+    margin: 32px 22PX;
+
+}
+
+.mpl__descriptiton>h1+p {
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    margin: 32px 22PX;
+    line-height: 35.7px;
+    color: #000000;
+    margin: 32px 22PX;
+    box-sizing: border-box;
+
+}
+
+.mpl__descriptiton>.mpl__amount {
+    font-size: 12px;
+    line-height: 22px;
+    color: black;
+    margin: 32px 22PX;
+
+}
+
+.mpl__descriptiton_ul {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.mpl__descriptiton_ul>li {
+    background-color: #000;
+    color: wheat;
+    border-radius: 5px;
+    list-style-type: none;
+    border: 1px solid grey;
+    margin: 5px;
+    width: 32px;
+    text-align: center;
+    padding: 5px;
+    font-family: Futura, sans-serif;
+    letter-spacing: 1.2px;
+    line-height: 12px;
+    text-decoration: none solid rgb(113, 113, 113);
+    text-align: center;
+    text-transform: uppercase;
+    word-spacing: 0px;
+}
+
+.mpl__sizehs {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    margin: 12px 42px;
+}
+
+
+.mpl__increament {
+    display: flex;
+    flex: 1;
+}
+
+.mpl__increament>button {
+    height: auto;
+    width: 40px;
+}
+
+.mpl__increament>p {
+    border-radius: 3px;
+    padding: 2px;
+    background-color: dodgerblue;
+    color: white;
+    font-weight: bold;
+    height: auto;
+    width: 40px;
+    margin-top: 1px;
+    text-align: center;
+}
+
+.mpl__AddCart {
+    display: flex;
+
+}
+
+.mpl__buy {
+    padding-top: 13px;
+}
+
+.mpl__increament>input {
+    font-weight: bold;
+    /* border: 1px solid red; */
+    height: auto;
+    width: 40px;
+    text-align: center;
+    height: 25px;
+}
+
+.mpl__buy>input {
+    border: none;
+    width: 70%;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+/* overlay */
+
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease 0s
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+}
+
+
+.modal-content>h4 {
+    text-align: center;
+    font-weight: bold;
+    font-family: TRIM-BOLD;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #4D5959;
+}
+
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#myBtn {
+    margin-top: 12px;
+    width: 50px;
+    height: 22px;
+    border: none;
+    background-color: white;
+    border-bottom: 1px solid grey;
+}
+
+/* show */
+.mplShow {
+    display: flex;
+    width: 130vh;
+    height: 30vh;
+    height: auto;
+    justify-content: space-around;
+}
+
+.mplShow>.mplSizes>img {
+    width: 230px;
+}
+
+/* tables */
+.mplSizeTable {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.mplSizeTable td,
+.mplSizeTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.mplSizeTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #ffffff;
+    border: 1px solid whitesmoke;
+    color: #000;
+}
+
+.addShowCartP {
+    color:black;
+    font-weight: 600;
+    margin: 5px 3px;
 }
