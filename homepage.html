@@ -138,11 +138,16 @@
         height: auto;
         width: 40px;
     }
-
+    
     .mpl__increament>p {
-        /* border: 1px solid red; */
+        border-radius: 3px;
+        padding: 2px;
+        background-color: dodgerblue;
+        color: white;
+        font-weight: bold;
         height: auto;
         width: 40px;
+        margin-top: 1px;
         text-align: center;
     }
 
@@ -280,7 +285,8 @@
     }
 
     .addShowCartP {
-        color: red;
+        color:black;
+        font-weight: 600;
         /* border: 1px solid red; */
         margin: 5px 3px;
     }
@@ -416,7 +422,7 @@
                     </div>
                     <div>
                         <button onclick="addToCarts()"
-                            style="height: 30px; border: 1px solid green;background-color: whitesmoke;width: 172px; margin-left: -310px;">
+                            style="height: 30px;box-sizing: border-box; border-radius: 5px; background-color: whitesmoke;width: 172px; margin-left: -310px;">
                             carts </button>
                     </div>
                 </div>
@@ -427,9 +433,9 @@
                 <div class="mpl__buy">
                     <input style="background-color: red;" type="button" value="BuyitNow" onclick="mplBuyNOw()" />
                 </div>
-                <p style="color: red;"> looking product</p>
                 <div class="mpl__moredetails">
-                    <p> More details </p>
+                    <p style="color: red;"> looking product every time</p>
+                    <p style="font-weight: bold;margin-top: 32px;"> More details </p>
                     <hr>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quis perspiciatis nisi id, animi
